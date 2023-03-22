@@ -1,4 +1,5 @@
-from classes.result import Result
+from .result import Result
+from .game import Game
 
 class Player:
     def __init__(self, username:str):
@@ -14,3 +15,9 @@ class Player:
             self._username = username
         else:
             print("Username must be between 2 and 16 characters!")
+
+    def results( self ):
+        return [ result for result in Result.results if result.player == self]
+    
+    def games_played( self ):
+        return [ result.game for result in self.results() ]

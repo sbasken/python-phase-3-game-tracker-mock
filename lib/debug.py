@@ -5,7 +5,17 @@ from classes.player import Player
 from classes.game import Game
 from classes.result import Result
 
-if __name__ == '__main__':
-    print("HELLO! :) let's debug :vibing_potato:")
 
-    ipdb.set_trace()
+baseball = Game( 'Baseball' )
+football = Game( 'Football' )
+volleyball = Game( 'Volleyball' )
+
+adam = Player( 'Adam' )
+emily = Player( 'Emily' )
+joe = Player( 'Joe' )
+
+result1 = Result( adam, baseball, 30 )
+result2 = Result( emily, volleyball, 10 )
+result3 = Result( adam, football, 20 )
+
+ipdb.set_trace()
