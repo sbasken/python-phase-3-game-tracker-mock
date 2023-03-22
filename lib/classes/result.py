@@ -1,14 +1,14 @@
 
 class Result:
 
-    results = []
+    all = []
 
     def __init__( self, player, game, score ):
         self.player = player
         self.game = game
         self.score = score
 
-        Result.results.append( self )
+        Result.all.append( self )
 
     @property
     def score( self ):

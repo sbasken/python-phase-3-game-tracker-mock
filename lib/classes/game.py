@@ -22,7 +22,11 @@ class Game:
             print('Cannot change the title of the game')
 
     def results( self ):
-        return [ result for result in Result.results if result.game == self]
+        return [ result for result in Result.all if result.game == self]
     
     def players( self ):
         return [ result.player for result in self.results()]
+    
+    def average_score( self, player):
+        list = [ result.score for result in self.results()]
+        return sum(list) / len(list) 
